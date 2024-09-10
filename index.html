@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaaSicare Consultation Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px; /* Adds spacing between the two headings */
+        }
+        label {
+            font-size: 18px; /* Increased from 16px */
+            color: #666;
+            display: block; /* Makes label take the full width, easier to click */
+            margin: 10px 0; /* Adds more space around the label */
+        }
+        input[type="radio"] {
+            transform: scale(1.5); /* Enlarges the radio buttons */
+            margin-right: 8px; /* Adds space between the button and label text */
+            vertical-align: middle; /* Aligns the button vertically with the text */
+        }
+        .button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 24px; /* Increased padding for a larger button */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px; /* Larger font size */
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Please answer this question to join the relevant group</h2>
+        <h2>Have you taken any consultations from us?</h2>
+        <form id="consultationForm">
+            <label>
+                <input type="radio" name="consultation" value="yes" required> Yes
+            </label>
+            <label>
+                <input type="radio" name="consultation" value="no"> No
+            </label>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('consultationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const answer = document.querySelector('input[name="consultation"]:checked').value;
+            if (answer === 'yes') {
+                window.location.href = 'https://chat.whatsapp.com/BN94AcTwRYT9KPQZkrKf9A';
+            } else {
+                window.location.href = 'https://chat.whatsapp.com/DydMZIkTttWGj9TYpAf5p6';
+            }
+        });
+    </script>
+</body>
+</html>
